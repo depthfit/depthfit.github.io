@@ -129,7 +129,7 @@ a {
     flex-direction: column;
     align-items: flex-start;
     transform: translateX(35%); /* Shifts the subtitle group further right */
-    margin-top: 10rem; /* Moves the subtitle group even further down */
+    margin-top: 16rem; /* Moves the subtitle group even further down */
     position: relative;
     z-index: 3;
 }
