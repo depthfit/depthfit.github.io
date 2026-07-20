@@ -208,11 +208,11 @@ a {
 
 .rivers {
     font-size: 1.1rem;
-    color: var(--primary-blue);
+    color: var(--white);
     letter-spacing: 6px;
     font-weight: 900;
     margin-left: 7.5rem; /* Aligned with '川' in the box above */
-    background: rgba(225, 243, 255, 0.95); /* Same style as subtitle box */
+    background: rgba(9, 74, 154, 0.85); /* Darker blue background so white text is readable */
     padding: 0.4rem 2rem;
     border-radius: 40px;
     box-shadow: 0 4px 15px rgba(0, 50, 120, 0.05);
