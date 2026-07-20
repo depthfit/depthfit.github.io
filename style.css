@@ -178,14 +178,14 @@ a {
 }
 
 .subtitle-box {
-    background: rgba(220, 240, 255, 0.85);
+    background: rgba(220, 240, 255, 0.30);
     backdrop-filter: blur(12px);
     padding: 0.6rem 2.5rem;
     border-radius: 4px; /* Flatter edges in image */
     box-shadow: 0 4px 15px rgba(0, 50, 120, 0.1);
     font-size: 1.4rem;
     color: var(--primary-blue);
-    font-weight: 700;
+    font-weight: 900;
     margin-bottom: 0.5rem;
     letter-spacing: 4px;
     border-left: 4px solid var(--accent-blue);
@@ -195,7 +195,7 @@ a {
     font-size: 1.1rem;
     color: var(--white);
     letter-spacing: 6px;
-    font-weight: 700;
+    font-weight: 900;
     padding-left: 1rem;
     text-shadow: 0 2px 4px rgba(0,0,0,0.4);
 }
