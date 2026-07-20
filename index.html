@@ -43,6 +43,11 @@
                 <p>Third River Management Branch, Water Resources Agency, Ministry of Economic Affairs</p>
             </div>
         </div>
+        
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+
         <nav class="main-nav">
             <a href="#">關於三川</a>
             <a href="#">流域故事</a>
@@ -148,6 +153,14 @@
             </div>
         </section>
     </main>
-    <script src="script.js"></script>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const mainNav = document.querySelector('.main-nav');
+        
+        hamburger.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
