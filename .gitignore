@@ -1,0 +1,7 @@
+# Ignore raw materials and mockups
+_raw_materials/
+
+# Standard web development ignores
+node_modules/
+.DS_Store
+*.log

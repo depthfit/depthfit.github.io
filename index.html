@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三川流域誌 - 經濟部水利署第三河川分署</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-container">
+        <!-- Light blue watercolor base -->
+        <div class="bg-texture"></div>
+        <!-- Middle landscape picture -->
+        <div class="bg-landscape"></div>
+        <!-- Top left decorative leaves and waterdrop -->
+        <div class="bg-decoration-left">
+            <img src="assets/leaves.png" alt="Leaves" class="leaves-img">
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="45" fill="#00a0e9" opacity="0.2"/>
+                    <path d="M20 50 Q 50 20 80 50 T 80 80 Q 50 100 20 80 T 20 50" fill="url(#grad1)"/>
+                    <path d="M30 60 Q 50 40 70 60" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+                    <path d="M40 75 Q 50 60 60 75" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+                    <defs>
+                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#0069b4" />
+                            <stop offset="100%" stop-color="#00a0e9" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <div class="logo-text">
+                <h1>經濟部水利署 第三河川分署</h1>
+                <p>Third River Management Branch, Water Resources Agency, Ministry of Economic Affairs</p>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <a href="#">關於三川</a>
+            <a href="#">流域故事</a>
+            <a href="#">生態圖鑑</a>
+            <a href="#">守護行動</a>
+            <a href="#">聯絡我們</a>
+            <a href="#" class="lang-btn">EN</a>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <div class="hero-titles">
+            <div class="title-wrapper">
+                <!-- Watercolor swoosh behind title -->
+                <div class="title-swoosh">
+                    <img src="assets/swoosh.png" alt="swoosh decoration">
+                </div>
+                <!-- Clear, elegant serif font instead of unreadable cursive -->
+                <h1 class="main-title serif">三川流域誌</h1>
+            </div>
+            
+            <!-- Aligned exactly as the image: box with text, and small text below it, offset to the right -->
+            <div class="subtitle-group">
+                <div class="subtitle-box">記錄三川 · 人與河的故事</div>
+                <div class="rivers">大甲溪 · 大安溪 · 烏溪</div>
+            </div>
+        </div>
+
+        <section class="journals-section">
+            <div class="section-badge-container">
+                <div class="section-badge serif">
+                    三川流域之六誌
+                </div>
+            </div>
+            
+            <div class="cards-container">
+                <a href="inner.html" class="journal-card">
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-book-open"></i></div>
+                        <div class="card-num">01</div>
+                        <h3 class="serif">流域故事誌</h3>
+                        <p class="card-desc">探索三大流域的人文歷史、地方記憶與水文故事，傳承世代的河川文化。</p>
+                    </div>
+                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1544644181-1484b3fdfc62?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80')"></div>
+                    <div class="card-footer">開始閱讀 &rarr;</div>
+                </a>
+                <a href="inner.html" class="journal-card">
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-walking"></i></div>
+                        <div class="card-num">02</div>
+                        <h3 class="serif">川行踏查誌</h3>
+                        <p class="card-desc">實地走訪河川現場，記錄踏查足跡與自然地景，發現流域之美。</p>
+                    </div>
+                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80')"></div>
+                    <div class="card-footer">開始閱讀 &rarr;</div>
+                </a>
+                <a href="inner.html" class="journal-card">
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-heart"></i></div>
+                        <div class="card-num">03</div>
+                        <h3 class="serif">守護行動誌</h3>
+                        <p class="card-desc">記錄守護河川的行動與力量，展現志工、社區與民眾共同守護家園的成果。</p>
+                    </div>
+                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1594732832278-abd644401426?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80')"></div>
+                    <div class="card-footer">開始閱讀 &rarr;</div>
+                </a>
+                <a href="inner.html" class="journal-card">
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-leaf"></i></div>
+                        <div class="card-num">04</div>
+                        <h3 class="serif">三川生態誌</h3>
+                        <p class="card-desc">介紹流域生態環境與生物多樣性，記錄珍貴物種與棲地，守護自然的永續未來。</p>
+                    </div>
+                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1588614959060-4d144f28b207?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80')"></div>
+                    <div class="card-footer">開始閱讀 &rarr;</div>
+                </a>
+                <a href="inner.html" class="journal-card">
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-water"></i></div>
+                        <div class="card-num">05</div>
+                        <h3 class="serif">治水與工程誌</h3>
+                        <p class="card-desc">回顧治水工程與河川整治歷程，展現水利建設如何守護人民與流域安全。</p>
+                    </div>
+                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1505322022379-7c3353ee6291?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80')"></div>
+                    <div class="card-footer">開始閱讀 &rarr;</div>
+                </a>
+                <a href="inner.html" class="journal-card">
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-handshake"></i></div>
+                        <div class="card-num">06</div>
+                        <h3 class="serif">公私協力誌</h3>
+                        <p class="card-desc">記錄公私協力合作成果，串聯企業、社區與民間力量，共創流域永續價值。</p>
+                    </div>
+                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80')"></div>
+                    <div class="card-footer">開始閱讀 &rarr;</div>
+                </a>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
