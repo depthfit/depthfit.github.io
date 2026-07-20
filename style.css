@@ -185,7 +185,7 @@ a {
 }
 
 .subtitle-box {
-    background: rgba(220, 240, 255, 0.30);
+    background: rgba(210, 238, 255, 0.9); /* Light blue background */
     padding: 0.6rem 2.5rem;
     border-radius: 4px; /* Flatter edges in image */
     box-shadow: 0 4px 15px rgba(0, 50, 120, 0.1);
@@ -202,7 +202,11 @@ a {
     color: var(--white);
     letter-spacing: 6px;
     font-weight: 900;
-    padding-left: 7.5rem; /* Aligned with '川' in the box above */
+    margin-left: 7.5rem; /* Aligned with '川' in the box above */
+    padding: 0.4rem 1.5rem;
+    background: rgba(0, 40, 100, 0.45); /* Semi-transparent background */
+    border-radius: 20px;
+    display: inline-block;
     text-shadow: 0 2px 4px rgba(0,0,0,0.4);
 }
 
