@@ -124,6 +124,16 @@ a {
     z-index: 1;
 }
 
+.subtitle-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transform: translateX(35%); /* Shifts the subtitle group further right */
+    margin-top: 2rem; /* Moves the subtitle group down */
+    position: relative;
+    z-index: 3;
+}
+
 .hero-titles {
     width: 100%;
     max-width: 1200px;
