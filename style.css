@@ -140,16 +140,19 @@ a {
 }
 
 .main-title {
-    font-size: 8.5rem; /* Massive, clear serif title */
-    color: var(--primary-blue);
-    letter-spacing: 12px;
     position: relative;
     z-index: 2;
-    text-shadow: 2px 5px 15px rgba(255,255,255,0.8);
-    background: linear-gradient(135deg, #05316d 0%, #1a6ac9 50%, #05316d 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -1rem;
+}
+
+.title-img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(2px 5px 15px rgba(255,255,255,0.8));
 }
 
 .title-swoosh {
@@ -225,16 +228,20 @@ a {
 
 .section-badge {
     background: var(--white);
-    display: inline-block;
-    padding: 0.8rem 3.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 3rem;
     border-radius: 40px;
-    color: var(--primary-blue);
-    font-size: 1.8rem;
-    font-weight: 700;
     box-shadow: 0 10px 25px rgba(0, 50, 120, 0.08);
     position: relative;
     z-index: 2;
-    letter-spacing: 2px;
+}
+
+.badge-img {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
 }
 
 .section-badge::before {
