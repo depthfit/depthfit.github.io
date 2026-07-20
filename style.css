@@ -129,7 +129,7 @@ a {
     flex-direction: column;
     align-items: flex-start;
     transform: translateX(35%); /* Shifts the subtitle group further right */
-    margin-top: 2rem; /* Moves the subtitle group down */
+    margin-top: 6rem; /* Moves the subtitle group further down */
     position: relative;
     z-index: 3;
 }
@@ -195,16 +195,15 @@ a {
 }
 
 .subtitle-box {
-    background: rgba(210, 238, 255, 0.9); /* Light blue background */
+    background: rgba(225, 243, 255, 0.95); /* Clean, solid pale blue */
     padding: 0.6rem 2.5rem;
-    border-radius: 4px; /* Flatter edges in image */
-    box-shadow: 0 4px 15px rgba(0, 50, 120, 0.1);
+    border-radius: 40px; /* Fully rounded pill shape */
+    box-shadow: 0 4px 15px rgba(0, 50, 120, 0.05);
     font-size: 1.4rem;
     color: var(--primary-blue);
     font-weight: 900;
     margin-bottom: 0.5rem;
     letter-spacing: 4px;
-    border-left: 4px solid var(--accent-blue);
 }
 
 .rivers {
@@ -213,11 +212,7 @@ a {
     letter-spacing: 6px;
     font-weight: 900;
     margin-left: 7.5rem; /* Aligned with '川' in the box above */
-    padding: 0.4rem 1.5rem;
-    background: rgba(0, 40, 100, 0.45); /* Semi-transparent background */
-    border-radius: 20px;
-    display: inline-block;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Shadow helps it pop against swoosh */
 }
 
 /* Journal Cards Section */
