@@ -29,6 +29,10 @@ body {
     font-family: 'Noto Serif TC', serif;
 }
 
+.brush {
+    font-family: 'Ma Shan Zheng', 'Yuji Syuku', 'DFKai-SB', 'BiauKai', 'Kaiti TC', serif;
+}
+
 a {
     text-decoration: none;
     color: inherit;
