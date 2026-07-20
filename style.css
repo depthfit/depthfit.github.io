@@ -125,13 +125,13 @@ a {
 }
 
 .subtitle-group {
+    position: absolute;
+    bottom: -150px; /* Safely clears the title */
+    right: 50px; /* Positioned at the bottom right */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    transform: translateX(35%); /* Shifts the subtitle group further right */
-    margin-top: 16rem; /* Moves the subtitle group even further down */
-    position: relative;
-    z-index: 3;
+    z-index: 4;
 }
 
 .hero-titles {
