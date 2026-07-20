@@ -179,7 +179,6 @@ a {
 
 .subtitle-box {
     background: rgba(220, 240, 255, 0.30);
-    backdrop-filter: blur(12px);
     padding: 0.6rem 2.5rem;
     border-radius: 4px; /* Flatter edges in image */
     box-shadow: 0 4px 15px rgba(0, 50, 120, 0.1);
