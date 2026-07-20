@@ -124,6 +124,15 @@ a {
     z-index: 1;
 }
 
+.hero-titles {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 8vh; /* Reduced from 15vh to tighten the gap below the top menu */
+    z-index: 2; /* Ensure it stays above the overlay */
+}
+
 .subtitle-group {
     display: flex;
     flex-direction: column;
