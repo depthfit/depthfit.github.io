@@ -29,6 +29,7 @@ def generate_svg_from_img(img_path, out_path, box, fill_color):
             f.write(f'  <path d="{path}" fill="{fill_color}" fill-rule="evenodd"/>\n')
         f.write('</svg>\n')
 
-generate_svg_from_img('_raw_materials/三川流域誌（首頁）.jpg', 'assets/title.svg', (1200, 400, 4600, 1250), '#094a9a')
+# Tighter crop to avoid the swoosh on the bottom and navigation on the right
+generate_svg_from_img('_raw_materials/三川流域誌（首頁）.jpg', 'assets/title.svg', (1700, 450, 4100, 1050), '#094a9a')
 generate_svg_from_img('_raw_materials/三川流域誌（首頁）.jpg', 'assets/badge_text.svg', (300, 1800, 1500, 2200), '#094a9a')
 print('SVGs generated successfully')
