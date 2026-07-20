@@ -199,7 +199,7 @@ a {
     color: var(--white);
     letter-spacing: 6px;
     font-weight: 900;
-    padding-left: 1rem;
+    padding-left: 7.5rem; /* Aligned with '川' in the box above */
     text-shadow: 0 2px 4px rgba(0,0,0,0.4);
 }
 
