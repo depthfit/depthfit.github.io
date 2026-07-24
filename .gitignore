@@ -5,3 +5,11 @@ _raw_materials/
 node_modules/
 .DS_Store
 *.log
+
+# Python / Django ignores
+venv/
+__pycache__/
+*.pyc
+mycms/media/
+# Note: we are pushing mycms/db.sqlite3 so you have a baseline, 
+# but Railway volume will overwrite it in production.

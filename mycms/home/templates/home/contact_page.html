@@ -1,0 +1,91 @@
+{% load static wagtailcore_tags home_tags wagtailimages_tags %}
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} - 三川流域誌</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Ma+Shan+Zheng&family=Yuji+Syuku&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'home/style.css' %}">
+    <style>
+        .contact-container {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 3rem;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .contact-title {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .contact-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #34495e;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-container">
+        <div class="bg-texture"></div>
+        <div class="bg-decoration-left">
+            <img src="{% static 'home/assets/leaves.png' %}" alt="Leaves" class="leaves-img">
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="logo">
+            <div class="logo-icon">
+                <img src="{% static 'home/assets/ROC_Water_Resources_Agency_Seal.svg' %}" alt="經濟部水利署 Logo" style="width: 100%; height: 100%;">
+            </div>
+            <div class="logo-text">
+                <h1>經濟部水利署 第三河川分署</h1>
+                <p>Third River Management Branch, Water Resources Agency, Ministry of Economic Affairs</p>
+            </div>
+        </div>
+        
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <nav class="main-nav">
+            <a href="/">首頁</a>
+            <a href="/01_story.html">流域故事</a>
+            <a href="/04_ecology.html">生態圖鑑</a>
+            <a href="/03_guard.html">守護行動</a>
+            <a href="/contact/">聯絡我們</a>
+            <a href="#" class="lang-btn">EN</a>
+        </nav>
+    </header>
+
+    <main class="contact-container">
+        <h1 class="contact-title serif">{{ page.title }}</h1>
+        <div class="contact-content">
+            {{ page.body|richtext }}
+        </div>
+    </main>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const icon = hamburger.querySelector('i');
+        const mainNav = document.querySelector('.main-nav');
+        
+        hamburger.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            if (mainNav.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    </script>
+</body>
+</html>
