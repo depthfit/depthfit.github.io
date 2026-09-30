@@ -1,5 +1,11 @@
 # Ignore raw materials and mockups
 _raw_materials/
+三川要改/
+*.docx
+
+# Playwright & test artifacts
+.playwright-mcp/
+preview_*.png
 
 # Standard web development ignores
 node_modules/

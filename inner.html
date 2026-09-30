@@ -3,179 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>川行踏查誌 - 三川流域誌</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
+    <title>流域故事誌 - 三川流域誌</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="inner-page">
-    <div class="bg-watercolor"></div>
+    <!-- Full-bleed background layer with temple watercolor -->
+    <div class="inner-bg-container">
+        <div class="inner-bg-image"></div>
+    </div>
 
-    <div class="layout-container">
-        <!-- Sidebar -->
+    <!-- Mobile Header with Hamburger -->
+    <header class="mobile-header">
+        <a href="index.html" class="mobile-logo">
+            <img src="assets/v2/logo_sidebar.png" alt="經濟部水利署 第三河川分署" class="mobile-logo-img">
+        </a>
+        <button class="sidebar-toggle" aria-label="切換選單">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <div class="inner-layout">
+        <!-- Sidebar Navigation -->
         <aside class="sidebar">
-            <div class="logo">
-                <div class="logo-icon">
-                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="45" fill="#00a0e9" opacity="0.2"/>
-                        <path d="M20 50 Q 50 20 80 50 T 80 80 Q 50 100 20 80 T 20 50" fill="url(#grad2)"/>
-                        <path d="M30 60 Q 50 40 70 60" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
-                        <path d="M40 75 Q 50 60 60 75" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
-                        <defs>
-                            <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#0069b4" />
-                                <stop offset="100%" stop-color="#00a0e9" />
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                </div>
-                <div class="logo-text">
-                    <h1>經濟部水利署<br>第三河川分署</h1>
-                    <p>Third River Management Branch,<br>Water Resources Agency, MOEA</p>
-                </div>
+            <div class="sidebar-header">
+                <a href="index.html" class="sidebar-logo-link" title="回首頁">
+                    <img src="assets/v2/logo_sidebar.png" alt="經濟部水利署 第三河川分署" class="sidebar-logo-img">
+                </a>
             </div>
+
+            <div class="sidebar-divider"></div>
             
             <nav class="side-nav">
-                <a href="index.html" class="nav-item">
-                    <i class="fas fa-home"></i>
-                    <div>
-                        <div class="title">首頁</div>
-                        <div class="sub">三川流域誌</div>
-                    </div>
+                <!-- 01 首頁 -->
+                <a href="index.html" class="side-nav-item" title="首頁 - 三川流域誌">
+                    <img src="assets/v2/side_nav_home.png" alt="首頁" class="side-nav-icon-img">
                 </a>
-                <a href="#" class="nav-item">
-                    <i class="fas fa-book-open"></i>
-                    <div>
-                        <div class="title">流域故事誌</div>
-                        <div class="sub">記錄三川 · 人與河的故事</div>
-                    </div>
+
+                <!-- 02 流域故事誌 (Active) -->
+                <a href="inner.html" class="side-nav-item active" title="流域故事誌 - 記錄三川 · 人與河的故事">
+                    <img src="assets/v2/side_nav_story.png" alt="流域故事誌" class="side-nav-icon-img">
                 </a>
-                <a href="#" class="nav-item active">
-                    <i class="fas fa-walking"></i>
-                    <div>
-                        <div class="title">川行踏查誌</div>
-                        <div class="sub">走入河川現場 · 踏查紀錄</div>
-                    </div>
+
+                <!-- 03 守溪行動誌 -->
+                <a href="#" class="side-nav-item" title="守溪行動誌 - 守護家園 · 共同行動">
+                    <img src="assets/v2/side_nav_action.png" alt="守溪行動誌" class="side-nav-icon-img">
                 </a>
-                <a href="#" class="nav-item">
-                    <i class="fas fa-heart"></i>
-                    <div>
-                        <div class="title">守護行動誌</div>
-                        <div class="sub">守護家園 · 共同行動</div>
-                    </div>
+
+                <!-- 04 三川生態誌 -->
+                <a href="#" class="side-nav-item" title="三川生態誌 - 生態多樣 · 永續共生">
+                    <img src="assets/v2/side_nav_eco.png" alt="三川生態誌" class="side-nav-icon-img">
                 </a>
-                <a href="#" class="nav-item">
-                    <i class="fas fa-leaf"></i>
-                    <div>
-                        <div class="title">三川生態誌</div>
-                        <div class="sub">生態多樣 · 永續共生</div>
-                    </div>
-                </a>
-                <a href="#" class="nav-item">
-                    <i class="fas fa-water"></i>
-                    <div>
-                        <div class="title">治水與工程誌</div>
-                        <div class="sub">治水建設 · 守護安全</div>
-                    </div>
-                </a>
-                <a href="#" class="nav-item">
-                    <i class="fas fa-handshake"></i>
-                    <div>
-                        <div class="title">公私協力誌</div>
-                        <div class="sub">公私協力 · 共創流域價值</div>
-                    </div>
+
+                <!-- 05 公私協力誌 -->
+                <a href="#" class="side-nav-item" title="公私協力誌 - 公私協力 · 共創流域價值">
+                    <img src="assets/v2/side_nav_collab.png" alt="公私協力誌" class="side-nav-icon-img">
                 </a>
             </nav>
         </aside>
 
-        <!-- Main Content -->
-        <main class="content-area">
-            <div class="breadcrumb">
-                <a href="index.html"><i class="fas fa-home"></i> 首頁</a> <span class="divider">&gt;</span> <span class="current">川行踏查誌</span>
-            </div>
+        <!-- Main Content Area -->
+        <main class="inner-content-area">
+            <!-- Breadcrumb Navigation -->
+            <nav class="breadcrumb-container" aria-label="路徑導航">
+                <a href="index.html" class="breadcrumb-pill">
+                    <i class="fas fa-home breadcrumb-icon"></i>
+                    <span class="breadcrumb-home">首頁</span>
+                    <span class="breadcrumb-arrow">›</span>
+                    <span class="breadcrumb-current">流域故事誌</span>
+                </a>
+            </nav>
 
-            <div class="inner-hero">
-                <div class="hero-text">
-                    <h1 class="serif title-large">川行踏查誌</h1>
-                    <h2 class="subtitle">記錄三川 · 人與河的故事</h2>
-                    <p>實地走訪河川現場，記錄踏查足跡與自然地景，發現流域之美。</p>
+            <!-- Hero Title Banner Section -->
+            <section class="inner-hero-section">
+                <div class="inner-title-wrapper">
+                    <img src="assets/v2/inner_title.png" alt="流域故事誌 - 河流記憶，流域故事。每一條河流，都收藏著土地、文化與歲月的故事。" class="inner-title-img">
                 </div>
-                <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="踏查">
-                </div>
-            </div>
+            </section>
 
-            <div class="controls-bar">
-                <div class="filters">
-                    <button class="filter-btn active">全部 3</button>
-                    <button class="filter-btn">大甲溪 1</button>
-                    <button class="filter-btn">大安溪 1</button>
-                    <button class="filter-btn">烏溪 1</button>
+            <!-- Controls Bar: Filter Pills & Sorting/View -->
+            <section class="controls-bar">
+                <div class="filter-group" role="tablist" aria-label="河川分類篩選">
+                    <button class="filter-pill active" data-filter="all" role="tab" aria-selected="true">
+                        全部 3
+                    </button>
+                    <button class="filter-pill" data-filter="dajia" role="tab" aria-selected="false">
+                        大甲溪 1
+                    </button>
+                    <button class="filter-pill" data-filter="daan" role="tab" aria-selected="false">
+                        大安溪 1
+                    </button>
+                    <button class="filter-pill" data-filter="wuxi" role="tab" aria-selected="false">
+                        烏溪 1
+                    </button>
                 </div>
-                <div class="view-options">
-                    <span class="sort-label">排序</span>
-                    <select class="sort-select">
-                        <option>最新發佈</option>
-                    </select>
-                    <span class="view-icons">
+
+                <div class="view-options-group">
+                    <div class="sort-wrapper">
+                        <span class="sort-label">排序</span>
+                        <div class="custom-select-wrap">
+                            <select class="sort-select" aria-label="文章排序">
+                                <option value="newest">最新發佈 ▼</option>
+                                <option value="oldest">最舊發佈 ▲</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <span class="options-divider">｜</span>
+
+                    <div class="view-mode-wrapper">
                         <span class="view-label">檢視</span>
-                        <i class="fas fa-th-large active"></i>
-                        <i class="fas fa-list"></i>
-                    </span>
+                        <button class="view-mode-btn grid-mode active" title="網格檢視" aria-label="網格檢視">
+                            <i class="fas fa-th-large"></i>
+                        </button>
+                        <button class="view-mode-btn list-mode" title="列表檢視" aria-label="列表檢視">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="article-grid">
-                <article class="article-card">
-                    <div class="img-wrapper">
-                        <span class="badge left">烏溪</span>
-                        <span class="badge right">03</span>
-                        <img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="烏溪">
-                    </div>
-                    <div class="article-content">
-                        <div class="category">人文歷史 · 河川生態景觀</div>
-                        <h3 class="serif">烏溪總先翻湧低語，水位暴漲的瞬間，藏著一段段中部人與洪水對峙的歷史。</h3>
-                        <div class="article-footer">
-                            <span class="read-more">開始閱讀 &rarr;</span>
-                            <span class="date">2024.09.22</span>
-                        </div>
-                    </div>
-                </article>
+            <!-- Article Cards Grid -->
+            <section class="articles-section">
+                <div class="article-grid">
+                    <!-- 01 大甲溪文章 -->
+                    <article class="article-card" data-river="dajia" data-order="1">
+                        <a href="#" class="article-card-link" aria-label="大甲溪孕育山林、聚落與水文化，流淌著中臺灣的人文故事。">
+                            <img src="assets/v2/article_dajia.png" alt="大甲溪孕育山林、聚落與水文化，流淌著中臺灣的人文故事。" class="article-card-img">
+                        </a>
+                    </article>
 
-                <article class="article-card">
-                    <div class="img-wrapper">
-                        <span class="badge left">大安溪</span>
-                        <span class="badge right">01</span>
-                        <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="大安溪">
-                    </div>
-                    <div class="article-content">
-                        <div class="category">人文歷史 · 河川生態景觀</div>
-                        <h3 class="serif">大安溪自山谷急湧而出，沖刷河床、改變河道，也默默記錄著人們與洪水周旋的歲月。</h3>
-                        <div class="article-footer">
-                            <span class="read-more">開始閱讀 &rarr;</span>
-                            <span class="date">2024.08.30</span>
-                        </div>
-                    </div>
-                </article>
+                    <!-- 02 大安溪文章 -->
+                    <article class="article-card" data-river="daan" data-order="2">
+                        <a href="#" class="article-card-link" aria-label="大安溪串聯山林與平原，孕育豐富的流域文化與歷史記憶。">
+                            <img src="assets/v2/article_daan.png" alt="大安溪串聯山林與平原，孕育豐富的流域文化與歷史記憶。" class="article-card-img">
+                        </a>
+                    </article>
 
-                <article class="article-card">
-                    <div class="img-wrapper">
-                        <span class="badge left">大甲溪</span>
-                        <span class="badge right">02</span>
-                        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="大甲溪">
-                    </div>
-                    <div class="article-content">
-                        <div class="category">人文歷史 · 河川生態景觀</div>
-                        <h3 class="serif">每逢山雨傾瀉，大甲溪自雪峰奔流而下，洪水刻畫河道，也寫下世代與溪流共存的治水故事。</h3>
-                        <div class="article-footer">
-                            <span class="read-more">開始閱讀 &rarr;</span>
-                            <span class="date">2024.10.18</span>
-                        </div>
-                    </div>
-                </article>
-            </div>
+                    <!-- 03 烏溪文章 -->
+                    <article class="article-card" data-river="wuxi" data-order="3">
+                        <a href="#" class="article-card-link" aria-label="烏溪匯聚群川、滋養城鄉，見證流域發展與人水共生的生活文化。">
+                            <img src="assets/v2/article_wuxi.png" alt="烏溪匯聚群川、滋養城鄉，見證流域發展與人水共生的生活文化。" class="article-card-img">
+                        </a>
+                    </article>
+                </div>
+            </section>
         </main>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
