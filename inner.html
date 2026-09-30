@@ -7,9 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="image" href="assets/v2/inner_bg.webp" type="image/webp">
-    <link rel="preload" as="image" href="assets/v2/inner_title.webp" type="image/webp">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preload" as="image" href="assets/v2/inner_title.webp" type="image/webp" fetchpriority="high">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap">
+    </noscript>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="inner-page">
@@ -24,7 +27,8 @@
             <img src="assets/v2/logo_sidebar.webp" alt="經濟部水利署 第三河川分署" class="mobile-logo-img">
         </a>
         <button class="sidebar-toggle" aria-label="切換選單">
-            <i class="fas fa-bars"></i>
+            <svg class="icon-menu icon-open" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            <svg class="icon-menu icon-close" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         </button>
     </header>
 
@@ -72,7 +76,7 @@
             <!-- Breadcrumb Navigation -->
             <nav class="breadcrumb-container" aria-label="路徑導航">
                 <a href="index.html" class="breadcrumb-pill">
-                    <i class="fas fa-home breadcrumb-icon"></i>
+                    <svg class="breadcrumb-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
                     <span class="breadcrumb-home">首頁</span>
                     <span class="breadcrumb-arrow">›</span>
                     <span class="breadcrumb-current">流域故事誌</span>
@@ -119,10 +123,10 @@
                     <div class="view-mode-wrapper">
                         <span class="view-label">檢視</span>
                         <button class="view-mode-btn grid-mode active" title="網格檢視" aria-label="網格檢視">
-                            <i class="fas fa-th-large"></i>
+                            <svg class="mode-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M3 3h8v8H3zm10 0h8v8h-8zM3 13h8v8H3zm10 0h8v8h-8z"/></svg>
                         </button>
                         <button class="view-mode-btn list-mode" title="列表檢視" aria-label="列表檢視">
-                            <i class="fas fa-bars"></i>
+                            <svg class="mode-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
                         </button>
                     </div>
                 </div>
@@ -156,6 +160,6 @@
         </main>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

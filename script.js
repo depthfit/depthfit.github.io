@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (hamburger && mainNav) {
         hamburger.addEventListener('click', () => {
             const isOpen = mainNav.classList.toggle('active');
+            hamburger.classList.toggle('is-open', isOpen);
             const icon = hamburger.querySelector('i');
             if (icon) {
                 if (isOpen) {
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mainNav.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 mainNav.classList.remove('active');
+                hamburger.classList.remove('is-open');
                 const icon = hamburger.querySelector('i');
                 if (icon) {
                     icon.classList.remove('fa-times');
@@ -42,7 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (sidebarToggle && sidebar) {
         sidebarToggle.addEventListener('click', (e) => {
             e.stopPropagation();
-            sidebar.classList.toggle('open');
+            const isOpen = sidebar.classList.toggle('open');
+            sidebarToggle.classList.toggle('is-open', isOpen);
             const icon = sidebarToggle.querySelector('i');
             if (icon) {
                 icon.classList.toggle('fa-bars');
@@ -54,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.addEventListener('click', (e) => {
             if (sidebar.classList.contains('open') && !sidebar.contains(e.target) && e.target !== sidebarToggle) {
                 sidebar.classList.remove('open');
+                sidebarToggle.classList.remove('is-open');
                 const icon = sidebarToggle.querySelector('i');
                 if (icon) {
                     icon.classList.add('fa-bars');

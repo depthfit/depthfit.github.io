@@ -22,7 +22,7 @@
 }
 
 html, body {
-    font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: 'Noto Sans TC', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang TC", "Microsoft JhengHei", "微軟正黑體", sans-serif;
     color: var(--text-dark);
     line-height: 1.6;
     min-height: 100vh;
@@ -149,10 +149,33 @@ button {
     display: none;
     background: none;
     border: none;
-    font-size: 1.6rem;
     color: var(--primary-navy);
     cursor: pointer;
     z-index: 1001;
+    padding: 6px;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-menu {
+    display: block;
+    width: 26px;
+    height: 26px;
+    stroke: currentColor;
+}
+
+.icon-close {
+    display: none;
+}
+
+.hamburger.is-open .icon-open,
+.sidebar-toggle.is-open .icon-open {
+    display: none;
+}
+
+.hamburger.is-open .icon-close,
+.sidebar-toggle.is-open .icon-close {
+    display: block;
 }
 
 /* Hero Section */
@@ -308,9 +331,12 @@ button {
 .sidebar-toggle {
     background: none;
     border: none;
-    font-size: 1.5rem;
     color: var(--primary-navy);
     cursor: pointer;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .inner-layout {
@@ -445,7 +471,10 @@ button {
 
 .breadcrumb-icon {
     color: var(--primary-navy);
-    font-size: 0.95rem;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    vertical-align: -2px;
 }
 
 .breadcrumb-home {
@@ -579,12 +608,20 @@ button {
 .view-mode-btn {
     border: none;
     background: transparent;
-    font-size: 1.3rem;
     color: #8da5bf;
     cursor: pointer;
-    padding: 0.2rem 0.35rem;
+    padding: 0.25rem 0.35rem;
     transition: all 0.2s ease;
     border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mode-icon {
+    display: block;
+    width: 17px;
+    height: 17px;
 }
 
 .view-mode-btn.active,
@@ -730,7 +767,7 @@ button {
     }
 
     .hamburger {
-        display: block;
+        display: flex;
     }
 
     .main-nav {
