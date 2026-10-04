@@ -12,7 +12,7 @@
     --white: #ffffff;
     --card-shadow: 0 10px 30px rgba(0, 45, 95, 0.08);
     --card-hover-shadow: 0 20px 46px rgba(0, 45, 95, 0.16);
-    --sidebar-width: 330px;
+    --sidebar-width: 360px;
 }
 
 * {
@@ -381,13 +381,13 @@ button {
 
 .sidebar-logo-img {
     width: 100%;
-    max-width: 250px;
+    max-width: 275px;
     height: auto;
     object-fit: contain;
 }
 
 .sidebar-divider {
-    width: calc(100% - 4.4rem);
+    width: calc(100% - 3.6rem);
     height: 1px;
     background: rgba(180, 210, 235, 0.7);
     margin: 0 auto 1.6rem;
@@ -396,21 +396,21 @@ button {
 .side-nav {
     display: flex;
     flex-direction: column;
-    gap: 0.65rem;
-    padding: 0 1.2rem;
+    gap: 0.8rem;
+    padding: 0 1rem;
 }
 
 .side-nav-item {
     display: block;
-    padding: 0.75rem 1.4rem;
-    border-radius: 40px;
+    padding: 0.8rem 1.3rem;
+    border-radius: 44px;
     transition: all 0.25s ease;
     cursor: pointer;
     background: transparent;
 }
 
 .side-nav-icon-img {
-    height: 52px;
+    height: 66px;
     width: auto;
     max-width: 100%;
     object-fit: contain;
@@ -520,25 +520,25 @@ button {
 }
 
 .hero-feature-wrapper {
-    width: 360px;
-    max-width: 38%;
+    width: 480px;
+    max-width: 46%;
     flex-shrink: 0;
 }
 
 .hero-feature-img {
     width: 100%;
-    height: 220px;
+    height: 300px;
     object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 10px 28px rgba(0, 45, 95, 0.12);
-    border: 2px solid rgba(255, 255, 255, 0.95);
+    border-radius: 22px;
+    box-shadow: 0 14px 34px rgba(0, 45, 95, 0.16);
+    border: 3px solid rgba(255, 255, 255, 0.95);
     display: block;
     transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .hero-feature-img:hover {
     transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 16px 36px rgba(0, 45, 95, 0.18);
+    box-shadow: 0 20px 42px rgba(0, 45, 95, 0.22);
 }
 
 .inner-title-img {
@@ -998,11 +998,15 @@ button {
         transform: translateX(-100%);
         transition: transform 0.35s ease;
         box-shadow: 2px 0 20px rgba(0, 0, 0, 0.15);
-        width: 290px;
+        width: 320px;
     }
 
     .sidebar.open {
         transform: translateX(0);
+    }
+
+    .side-nav-icon-img {
+        height: 58px;
     }
 
     .inner-content-area {
@@ -1045,7 +1049,7 @@ button {
     }
 
     .hero-feature-img {
-        height: 200px;
+        height: 240px;
     }
 
     /* List View Mobile */
