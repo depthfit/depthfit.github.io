@@ -146,4 +146,22 @@ document.addEventListener('DOMContentLoaded', () => {
             cards.forEach(card => articleGrid.appendChild(card));
         });
     }
+
+    // -------------------------------------------------------------------------
+    // 6. Query Param Router (e.g. ?journal=action)
+    // -------------------------------------------------------------------------
+    const urlParams = new URLSearchParams(window.location.search);
+    const journalParam = urlParams.get('journal');
+    if (journalParam) {
+        const routes = {
+            'story': 'inner.html',
+            'action': 'action.html',
+            'eco': 'eco.html',
+            'collab': 'collab.html'
+        };
+        const currentPath = window.location.pathname;
+        if (routes[journalParam] && !currentPath.endsWith(routes[journalParam])) {
+            window.location.href = routes[journalParam];
+        }
+    }
 });

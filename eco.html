@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>流域故事誌 - 三川流域誌</title>
+    <title>三川生態誌 - 三川流域誌</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="image" href="assets/v2/inner_bg.webp" type="image/webp">
-    <link rel="preload" as="image" href="assets/v2/inner_title.webp" type="image/webp" fetchpriority="high">
+    <link rel="preload" as="image" href="assets/v2/inner_bg_clean.webp" type="image/webp">
+    <link rel="preload" as="image" href="assets/v2/inner_title_eco.webp" type="image/webp" fetchpriority="high">
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
     <noscript>
@@ -16,8 +16,8 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="inner-page">
-    <!-- Full-bleed background layer with temple watercolor -->
+<body class="inner-page clean-bg">
+    <!-- Full-bleed background layer -->
     <div class="inner-bg-container">
         <div class="inner-bg-image"></div>
     </div>
@@ -50,8 +50,8 @@
                     <img src="assets/v2/side_nav_home.webp" alt="首頁" class="side-nav-icon-img">
                 </a>
 
-                <!-- 02 流域故事誌 (Active) -->
-                <a href="inner.html" class="side-nav-item active" title="流域故事誌 - 記錄三川 · 人與河的故事">
+                <!-- 02 流域故事誌 -->
+                <a href="inner.html" class="side-nav-item" title="流域故事誌 - 記錄三川 · 人與河的故事">
                     <img src="assets/v2/side_nav_story.webp" alt="流域故事誌" class="side-nav-icon-img">
                 </a>
 
@@ -60,8 +60,8 @@
                     <img src="assets/v2/side_nav_action.webp" alt="守護行動誌" class="side-nav-icon-img">
                 </a>
 
-                <!-- 04 三川生態誌 -->
-                <a href="eco.html" class="side-nav-item" title="三川生態誌 - 生態多樣 · 永續共生">
+                <!-- 04 三川生態誌 (Active) -->
+                <a href="eco.html" class="side-nav-item active" title="三川生態誌 - 生態多樣 · 永續共生">
                     <img src="assets/v2/side_nav_eco.webp" alt="三川生態誌" class="side-nav-icon-img">
                 </a>
 
@@ -80,31 +80,27 @@
                     <svg class="breadcrumb-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
                     <span class="breadcrumb-home">首頁</span>
                     <span class="breadcrumb-arrow">›</span>
-                    <span class="breadcrumb-current">流域故事誌</span>
+                    <span class="breadcrumb-current">三川生態誌</span>
                 </a>
             </nav>
 
             <!-- Hero Title Banner Section -->
             <section class="inner-hero-section">
-                <div class="inner-title-wrapper">
-                    <img src="assets/v2/inner_title.webp" alt="流域故事誌 - 河流記憶，流域故事。每一條河流，都收藏著土地、文化與歲月的故事。" class="inner-title-img" fetchpriority="high">
+                <div class="inner-hero-banner">
+                    <div class="inner-title-wrapper">
+                        <img src="assets/v2/inner_title_eco.webp" alt="三川生態誌 - 探索三川生命之美，看見山水共生的感動。" class="inner-title-img" fetchpriority="high">
+                    </div>
+                    <div class="hero-feature-wrapper">
+                        <img src="assets/v2/hero_feature_eco.webp" alt="三川生態誌特有物種" class="hero-feature-img">
+                    </div>
                 </div>
             </section>
 
-            <!-- Controls Bar: Filter Pills & Sorting/View -->
+            <!-- Controls Bar: Sequential Article Feed & Sorting/View -->
             <section class="controls-bar">
-                <div class="filter-group" role="tablist" aria-label="河川分類篩選">
+                <div class="filter-group" role="tablist" aria-label="文章分類">
                     <button class="filter-pill active" data-filter="all" role="tab" aria-selected="true">
-                        全部 3
-                    </button>
-                    <button class="filter-pill" data-filter="dajia" role="tab" aria-selected="false">
-                        大甲溪 1
-                    </button>
-                    <button class="filter-pill" data-filter="daan" role="tab" aria-selected="false">
-                        大安溪 1
-                    </button>
-                    <button class="filter-pill" data-filter="wuxi" role="tab" aria-selected="false">
-                        烏溪 1
+                        全部文章 3
                     </button>
                 </div>
 
@@ -136,24 +132,57 @@
             <!-- Article Cards Grid -->
             <section class="articles-section">
                 <div class="article-grid">
-                    <!-- 01 大甲溪文章 -->
-                    <article class="article-card" data-river="dajia" data-order="1">
-                        <a href="#" class="article-card-link" aria-label="大甲溪孕育山林、聚落與水文化，流淌著中臺灣的人文故事。">
-                            <img src="assets/v2/article_dajia.webp" alt="大甲溪孕育山林、聚落與水文化，流淌著中臺灣的人文故事。" class="article-card-img" loading="lazy">
+                    <!-- Article 01 -->
+                    <article class="article-card" data-order="1">
+                        <a href="#" class="article-card-link" aria-label="探索河川深處的珍稀生命：細說流域特有魚種的生態與棲地生存。">
+                            <div class="card-media">
+                                <img src="assets/v2/article_fish_photo.webp" alt="探索河川深處的珍稀生命" class="card-media-img" loading="lazy">
+                                <span class="card-order-badge">01</span>
+                            </div>
+                            <div class="card-body">
+                                <span class="card-tag">特有物種 · 水中生命</span>
+                                <h3 class="card-title">探索河川深處的珍稀生命：細說流域特有魚種的生態與棲地生存。</h3>
+                                <div class="card-footer">
+                                    <span class="card-read-more">開始閱讀 →</span>
+                                    <time class="card-date">2024.10.20</time>
+                                </div>
+                            </div>
                         </a>
                     </article>
 
-                    <!-- 02 大安溪文章 -->
-                    <article class="article-card" data-river="daan" data-order="2">
-                        <a href="#" class="article-card-link" aria-label="大安溪串聯山林與平原，孕育豐富的流域文化與歷史記憶。">
-                            <img src="assets/v2/article_daan.webp" alt="大安溪串聯山林與平原，孕育豐富的流域文化與歷史記憶。" class="article-card-img" loading="lazy">
+                    <!-- Article 02 -->
+                    <article class="article-card" data-order="2">
+                        <a href="#" class="article-card-link" aria-label="流域生物多樣性圖鑑：從水生昆蟲到河川魚類，感受萬物共生的奧妙。">
+                            <div class="card-media">
+                                <img src="assets/v2/article_fish_art.webp" alt="流域生物多樣性圖鑑" class="card-media-img" loading="lazy">
+                                <span class="card-order-badge">02</span>
+                            </div>
+                            <div class="card-body">
+                                <span class="card-tag">自然生態 · 棲地觀測</span>
+                                <h3 class="card-title">流域生物多樣性圖鑑：從水生昆蟲到河川魚類，感受萬物共生的奧妙。</h3>
+                                <div class="card-footer">
+                                    <span class="card-read-more">開始閱讀 →</span>
+                                    <time class="card-date">2024.09.15</time>
+                                </div>
+                            </div>
                         </a>
                     </article>
 
-                    <!-- 03 烏溪文章 -->
-                    <article class="article-card" data-river="wuxi" data-order="3">
-                        <a href="#" class="article-card-link" aria-label="烏溪匯聚群川、滋養城鄉，見證流域發展與人水共生的生活文化。">
-                            <img src="assets/v2/article_wuxi.webp" alt="烏溪匯聚群川、滋養城鄉，見證流域發展與人水共生的生活文化。" class="article-card-img" loading="lazy">
+                    <!-- Article 03 -->
+                    <article class="article-card" data-order="3">
+                        <a href="#" class="article-card-link" aria-label="穿越山林與河谷的生態廊道：看見大甲溪、大安溪與烏溪的生命律動。">
+                            <div class="card-media">
+                                <img src="assets/v2/article_eco_river.webp" alt="穿越山林與河谷的生態廊道" class="card-media-img" loading="lazy">
+                                <span class="card-order-badge">03</span>
+                            </div>
+                            <div class="card-body">
+                                <span class="card-tag">山川地景 · 生態廊道</span>
+                                <h3 class="card-title">穿越山林與河谷的生態廊道：看見大甲溪、大安溪與烏溪的生命律動。</h3>
+                                <div class="card-footer">
+                                    <span class="card-read-more">開始閱讀 →</span>
+                                    <time class="card-date">2024.08.05</time>
+                                </div>
+                            </div>
                         </a>
                     </article>
                 </div>

@@ -1,6 +1,7 @@
 # Ignore raw materials and mockups
 _raw_materials/
 三川要改/
+改好的/
 *.docx
 
 # Playwright & test artifacts
