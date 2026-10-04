@@ -690,6 +690,7 @@ button {
     transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, opacity 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.9);
     cursor: pointer;
+    contain: layout paint;
 }
 
 .article-card:hover {
