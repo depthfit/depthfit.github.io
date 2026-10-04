@@ -68,10 +68,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // -------------------------------------------------------------------------
-    // 3. Inner Page Category Filter Pills (全部, 大甲溪, 大安溪, 烏溪)
+    // 3. Inner Page Category Filter Pills (全部, 大甲溪, 大安溪, 烏溪 / 文章類型)
     // -------------------------------------------------------------------------
     const filterPills = document.querySelectorAll('.filter-pill');
-    const articleCards = document.querySelectorAll('.article-card');
+    const articleCards = document.querySelectorAll('.article-card, .article-text-item');
 
     if (filterPills.length > 0 && articleCards.length > 0) {
         filterPills.forEach(pill => {
@@ -86,10 +86,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const targetFilter = pill.getAttribute('data-filter');
 
-                // Filter cards
+                // Filter cards / text items
                 articleCards.forEach(card => {
-                    const river = card.getAttribute('data-river');
-                    if (targetFilter === 'all' || river === targetFilter) {
+                    const filterTag = card.getAttribute('data-filter-tag') || card.getAttribute('data-river') || card.getAttribute('data-order');
+                    if (targetFilter === 'all' || filterTag === targetFilter || targetFilter === card.getAttribute('data-order')) {
                         card.classList.remove('hidden');
                         card.style.opacity = '0';
                         card.style.transform = 'translateY(10px)';
@@ -131,11 +131,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // 5. Sorting (Newest vs Oldest)
     // -------------------------------------------------------------------------
     const sortSelect = document.querySelector('.sort-select');
+    const articlesContainer = document.querySelector('.article-grid, .article-text-list');
 
-    if (sortSelect && articleGrid) {
+    if (sortSelect && articlesContainer) {
         sortSelect.addEventListener('change', (e) => {
             const val = e.target.value;
-            const cards = Array.from(articleGrid.querySelectorAll('.article-card'));
+            const cards = Array.from(articlesContainer.querySelectorAll('.article-card, .article-text-item'));
 
             cards.sort((a, b) => {
                 const orderA = parseInt(a.getAttribute('data-order') || '0', 10);
@@ -143,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return val === 'oldest' ? orderB - orderA : orderA - orderB;
             });
 
-            cards.forEach(card => articleGrid.appendChild(card));
+            cards.forEach(card => articlesContainer.appendChild(card));
         });
     }
 

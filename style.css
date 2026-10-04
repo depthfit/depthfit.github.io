@@ -373,10 +373,9 @@ button {
     left: 0;
     bottom: 0;
     height: 100vh;
-    background: url('assets/v2/sidebar_bg.webp') no-repeat top left / 100% 100%, rgba(250, 253, 255, 0.7);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border-right: 1px solid rgba(190, 218, 242, 0.5);
+    background: #ffffff;
+    border-right: 1px solid #edf2f7;
+    box-shadow: 2px 0 16px rgba(0, 0, 0, 0.02);
     display: flex;
     flex-direction: column;
     z-index: 100;
@@ -406,7 +405,7 @@ button {
 .sidebar-divider {
     width: calc(100% - 3.6rem);
     height: 1px;
-    background: rgba(180, 210, 235, 0.7);
+    background: #edf2f7;
     margin: 0 auto 1.6rem;
 }
 
@@ -424,6 +423,7 @@ button {
     transition: all 0.25s ease;
     cursor: pointer;
     background: transparent;
+    opacity: 0.45;
 }
 
 .side-nav-icon-img {
@@ -432,21 +432,24 @@ button {
     max-width: 100%;
     object-fit: contain;
     display: block;
-    transition: filter 0.25s ease;
+    transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
-.side-nav-item:hover:not(.active) {
-    background: rgba(255, 255, 255, 0.7);
+.side-nav-item:hover {
+    opacity: 0.85;
+    background: rgba(240, 246, 252, 0.7);
     transform: translateX(4px);
 }
 
 .side-nav-item.active {
-    background: var(--primary-navy);
-    box-shadow: 0 4px 18px rgba(25, 55, 94, 0.22);
+    opacity: 1;
+    background: transparent;
+    box-shadow: none;
+    transform: none;
 }
 
 .side-nav-item.active .side-nav-icon-img {
-    filter: brightness(0) invert(1);
+    filter: none;
 }
 
 /* Inner Content Area */
@@ -860,8 +863,121 @@ button {
     justify-content: center;
 }
 
+/* Text List Layout (02 守護行動誌, 03 三川生態誌, 04 公私協力誌 - No Preview Images) */
+.article-text-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1px solid rgba(180, 215, 240, 0.5);
+    margin-top: 1.5rem;
+}
+
+.article-text-item {
+    width: 100%;
+    border-bottom: 1px solid rgba(180, 215, 240, 0.5);
+    transition: background-color 0.25s ease;
+}
+
+.article-text-item:hover {
+    background: rgba(255, 255, 255, 0.45);
+}
+
+.article-text-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 2.2rem 0.8rem;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+}
+
+.row-tag-col {
+    width: 130px;
+    min-width: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.row-accent-bar {
+    width: 28px;
+    height: 3px;
+    background-color: #c99c3a;
+    border-radius: 2px;
+    display: block;
+}
+
+.row-tag {
+    color: #2b82c9;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.row-main-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.row-title {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    margin: 0;
+    transition: color 0.25s ease;
+}
+
+.article-text-item:hover .row-title {
+    color: var(--accent-blue);
+}
+
+.row-desc {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 0.98rem;
+    color: #557088;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.row-action-col {
+    flex-shrink: 0;
+}
+
+.row-read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--primary-navy);
+    font-size: 1.02rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: color 0.25s ease;
+}
+
+.row-arrow {
+    stroke: currentColor;
+    transition: transform 0.25s ease;
+}
+
+.article-text-item:hover .row-read-more {
+    color: var(--accent-blue);
+}
+
+.article-text-item:hover .row-arrow {
+    transform: translateX(6px);
+}
+
 /* Filter Hide State */
-.article-card.hidden {
+.article-card.hidden,
+.article-text-item.hidden {
     display: none !important;
 }
 
@@ -1252,6 +1368,30 @@ button {
     }
     .article-grid.list-view .card-body {
         padding: 1.3rem 1.2rem 1.4rem;
+    }
+
+    /* Text List on Mobile Portrait */
+    .article-text-link {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.85rem;
+        padding: 1.5rem 0.4rem;
+    }
+    .row-tag-col {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    .row-title {
+        font-size: 1.16rem;
+    }
+    .row-desc {
+        font-size: 0.92rem;
+    }
+    .row-action-col {
+        align-self: flex-end;
+        margin-top: 0.2rem;
     }
 }
 

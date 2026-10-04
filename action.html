@@ -100,7 +100,16 @@
             <section class="controls-bar">
                 <div class="filter-group" role="tablist" aria-label="文章分類">
                     <button class="filter-pill active" data-filter="all" role="tab" aria-selected="true">
-                        全部文章 3
+                        全部 3
+                    </button>
+                    <button class="filter-pill" data-filter="1" role="tab">
+                        文章類型
+                    </button>
+                    <button class="filter-pill" data-filter="2" role="tab">
+                        文章類型
+                    </button>
+                    <button class="filter-pill" data-filter="3" role="tab">
+                        文章類型
                     </button>
                 </div>
 
@@ -119,69 +128,66 @@
 
                     <div class="view-mode-wrapper">
                         <span class="view-label">檢視</span>
-                        <button class="view-mode-btn grid-mode active" title="網格檢視" aria-label="網格檢視">
+                        <button class="view-mode-btn grid-mode" title="網格檢視" aria-label="網格檢視">
                             <svg class="mode-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M3 3h8v8H3zm10 0h8v8h-8zM3 13h8v8H3zm10 0h8v8h-8z"/></svg>
                         </button>
-                        <button class="view-mode-btn list-mode" title="列表檢視" aria-label="列表檢視">
+                        <button class="view-mode-btn list-mode active" title="列表檢視" aria-label="列表檢視">
                             <svg class="mode-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
                         </button>
                     </div>
                 </div>
             </section>
 
-            <!-- Article Cards Grid -->
+            <!-- Articles Text List (No Preview Image Layout) -->
             <section class="articles-section">
-                <div class="article-grid">
+                <div class="article-text-list">
                     <!-- Article 01 -->
-                    <article class="article-card" data-order="1">
-                        <a href="#" class="article-card-link" aria-label="從防汛護水到守護溪流：第三河川分署巡守志工的在地巡護紀實。">
-                            <div class="card-media">
-                                <img src="assets/v2/article_patrol.webp" alt="從防汛護水到守護溪流：第三河川分署巡守志工" class="card-media-img" loading="eager" decoding="async" width="800" height="533">
-                                <span class="card-order-badge">01</span>
+                    <article class="article-text-item" data-order="1" data-filter-tag="1">
+                        <a href="#" class="article-text-link" aria-label="走入河川現場，記錄守護環境的行動">
+                            <div class="row-tag-col">
+                                <span class="row-accent-bar"></span>
+                                <span class="row-tag">守護行動</span>
                             </div>
-                            <div class="card-body">
-                                <span class="card-tag">守護行動 · 志工巡守</span>
-                                <h3 class="card-title">從防汛護水到守護溪流：第三河川分署巡守志工的在地巡護紀實。</h3>
-                                <div class="card-footer">
-                                    <span class="card-read-more">開始閱讀 →</span>
-                                    <time class="card-date">2024.10.15</time>
-                                </div>
+                            <div class="row-main-col">
+                                <h3 class="row-title">走入河川現場，記錄守護環境的行動</h3>
+                                <p class="row-desc">從現場觀察與日常實踐出發，看見人與河川之間的連結。</p>
+                            </div>
+                            <div class="row-action-col">
+                                <span class="row-read-more">閱讀全文 <svg class="row-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
                             </div>
                         </a>
                     </article>
 
                     <!-- Article 02 -->
-                    <article class="article-card" data-order="2">
-                        <a href="#" class="article-card-link" aria-label="以村里為核心的守護網絡：在地居民齊心守護河川環境與家園安全。">
-                            <div class="card-media">
-                                <img src="assets/v2/article_village.webp" alt="以村里為核心的守護網絡" class="card-media-img" loading="eager" decoding="async" width="800" height="533">
-                                <span class="card-order-badge">02</span>
+                    <article class="article-text-item" data-order="2" data-filter-tag="2">
+                        <a href="#" class="article-text-link" aria-label="從細節開始，看見河川環境的變化">
+                            <div class="row-tag-col">
+                                <span class="row-accent-bar"></span>
+                                <span class="row-tag">守護行動</span>
                             </div>
-                            <div class="card-body">
-                                <span class="card-tag">在地村里 · 社區網絡</span>
-                                <h3 class="card-title">以村里為核心的守護網絡：在地居民齊心守護河川環境與家園安全。</h3>
-                                <div class="card-footer">
-                                    <span class="card-read-more">開始閱讀 →</span>
-                                    <time class="card-date">2024.09.28</time>
-                                </div>
+                            <div class="row-main-col">
+                                <h3 class="row-title">從細節開始，看見河川環境的變化</h3>
+                                <p class="row-desc">透過一次次的巡查與記錄，累積對河川環境的理解。</p>
+                            </div>
+                            <div class="row-action-col">
+                                <span class="row-read-more">閱讀全文 <svg class="row-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
                             </div>
                         </a>
                     </article>
 
                     <!-- Article 03 -->
-                    <article class="article-card" data-order="3">
-                        <a href="#" class="article-card-link" aria-label="走入流域第一線現場：看見溪流的真實樣貌，守護自然地景之美。">
-                            <div class="card-media">
-                                <img src="assets/v2/article_stream.webp" alt="走入流域第一線現場" class="card-media-img" loading="eager" decoding="async" width="800" height="533">
-                                <span class="card-order-badge">03</span>
+                    <article class="article-text-item" data-order="3" data-filter-tag="3">
+                        <a href="#" class="article-text-link" aria-label="沿著水流前行，探索自然與生活的連結">
+                            <div class="row-tag-col">
+                                <span class="row-accent-bar"></span>
+                                <span class="row-tag">守護行動</span>
                             </div>
-                            <div class="card-body">
-                                <span class="card-tag">棲地保育 · 溪流治理</span>
-                                <h3 class="card-title">走入流域第一線現場：看見溪流的真實樣貌，守護自然地景之美。</h3>
-                                <div class="card-footer">
-                                    <span class="card-read-more">開始閱讀 →</span>
-                                    <time class="card-date">2024.08.18</time>
-                                </div>
+                            <div class="row-main-col">
+                                <h3 class="row-title">沿著水流前行，探索自然與生活的連結</h3>
+                                <p class="row-desc">跟著水流走進地方故事，發現守護環境的不同方式。</p>
+                            </div>
+                            <div class="row-action-col">
+                                <span class="row-read-more">閱讀全文 <svg class="row-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
                             </div>
                         </a>
                     </article>
