@@ -304,7 +304,8 @@ button {
 /* ==========================================================
    HOMEPAGE SINGLE-PAGE ZERO-SCROLL VIEWPORT SCALING
    Adapts desktop & laptop screens (4K, 2K, 1080p, 900p, 768p, 720p)
-   to fit comfortably on ONE screen without vertical scrolling.
+   to fit comfortably on ONE screen without vertical scrolling,
+   preserving grand calligraphy banner and balanced cards layout.
    ========================================================== */
 @media (min-width: 900px) and (min-height: 520px) {
     html.home-html,
@@ -326,7 +327,7 @@ button {
     }
 
     .home-page .main-header {
-        padding: clamp(0.4rem, 1vh, 0.8rem) clamp(1.5rem, 3vw, 3.5rem);
+        padding: clamp(0.35rem, 0.9vh, 0.75rem) clamp(1.5rem, 3vw, 3.5rem);
     }
 
     .home-page .header-logo-img {
@@ -351,9 +352,9 @@ button {
         min-height: 0;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: flex-start;
         align-items: center;
-        padding: clamp(0.2rem, 1vh, 0.8rem) clamp(1rem, 2.5vw, 2.5rem) clamp(0.4rem, 1.2vh, 1rem);
+        padding: clamp(0.2rem, 0.6vh, 0.5rem) clamp(1rem, 2.5vw, 2.5rem) clamp(0.4rem, 1.2vh, 1rem);
         margin: 0 auto;
         width: 100%;
         max-width: 1560px;
@@ -362,24 +363,25 @@ button {
 
     .home-page .hero-banner-section {
         flex-shrink: 0;
-        margin: 0 0 clamp(0.2rem, 0.8vh, 0.6rem) 0;
+        margin: clamp(0.2rem, 0.6vh, 0.5rem) 0 0 0;
         width: 100%;
         display: flex;
         justify-content: center;
     }
 
     .home-page .hero-title-wrapper {
-        max-width: clamp(480px, 58vw, 980px);
+        max-width: min(1180px, 70vw);
         width: 100%;
         display: flex;
         justify-content: center;
     }
 
     .home-page .home-title-img {
-        max-height: clamp(65px, 14vh, 140px);
+        max-height: clamp(110px, 25vh, 250px);
         width: auto;
         max-width: 100%;
         object-fit: contain;
+        filter: drop-shadow(0 6px 20px rgba(255, 255, 255, 0.95));
     }
 
     .home-page .journals-section {
@@ -387,17 +389,17 @@ button {
         min-height: 0;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         width: fit-content;
         max-width: 100%;
-        margin: 0 auto;
+        margin: clamp(-18px, -1.8vh, -6px) auto 0;
     }
 
     .home-page .section-badge-container {
         flex-shrink: 0;
         align-self: flex-start;
-        margin-bottom: clamp(0.3rem, 1vh, 0.75rem);
+        margin-bottom: clamp(0.35rem, 0.8vh, 0.7rem);
         padding-left: 0.2rem;
     }
 
@@ -406,7 +408,7 @@ button {
     }
 
     .home-page .badge-img {
-        height: clamp(22px, 2.8vh, 30px);
+        height: clamp(22px, 2.8vh, 32px);
         width: auto;
     }
 
@@ -417,21 +419,21 @@ button {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        gap: clamp(0.8rem, 1.5vw, 1.6rem);
+        gap: clamp(0.8rem, 1.8vw, 1.8rem);
         width: auto;
         max-width: 100%;
-        padding: 10px 4px;
+        padding: 8px 4px;
         box-sizing: border-box;
     }
 
     .home-page .journal-card {
         height: 100%;
-        max-height: clamp(220px, 48vh, 480px);
+        max-height: clamp(250px, 53vh, 530px);
         aspect-ratio: 600 / 1128;
         width: auto;
         max-width: calc((100vw - 4rem) / 4);
         flex: 0 1 auto;
-        border-radius: clamp(14px, 1.2vw, 20px);
+        border-radius: clamp(14px, 1.2vw, 22px);
     }
 
     .home-page .journal-card:hover {
