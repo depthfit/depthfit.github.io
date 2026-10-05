@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap">
     </noscript>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body class="inner-page">
     <!-- Full-bleed background layer with temple watercolor -->
@@ -25,7 +25,7 @@
     <!-- Mobile Header with Hamburger -->
     <header class="mobile-header">
         <a href="index.html" class="mobile-logo">
-            <img src="assets/v2/logo_sidebar.webp" alt="經濟部水利署 第三河川分署" class="mobile-logo-img" width="180" height="38" decoding="async">
+            <img src="assets/v2/logo_header.webp" alt="經濟部水利署 第三河川分署" class="mobile-logo-img" width="220" height="38" decoding="async">
         </a>
         <button class="sidebar-toggle" aria-label="切換選單">
             <svg class="icon-menu icon-open" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
@@ -138,22 +138,22 @@
                 <div class="article-grid">
                     <!-- 01 大甲溪文章 -->
                     <article class="article-card" data-river="dajia" data-order="1">
-                        <a href="#" class="article-card-link" aria-label="大甲溪孕育山林、聚落與水文化，流淌著中臺灣的人文故事。">
-                            <img src="assets/v2/article_dajia.webp" alt="大甲溪孕育山林、聚落與水文化，流淌著中臺灣的人文故事。" class="article-card-img" loading="eager" decoding="async" width="800" height="664">
+                        <a href="#story-dajia" class="article-card-link" data-story-id="dajia" aria-label="大甲溪孕育山林、聚落與水文化，流淌著中臺灣的人文故事。">
+                            <img src="assets/v2/article_dajia.webp?v=3" alt="大甲溪孕育山林、聚落與水文化，流淌著中臺灣的人文故事。" class="article-card-img" loading="eager" decoding="async" width="800" height="664">
                         </a>
                     </article>
 
                     <!-- 02 大安溪文章 -->
                     <article class="article-card" data-river="daan" data-order="2">
-                        <a href="#" class="article-card-link" aria-label="大安溪串聯山林與平原，孕育豐富的流域文化與歷史記憶。">
-                            <img src="assets/v2/article_daan.webp" alt="大安溪串聯山林與平原，孕育豐富的流域文化與歷史記憶。" class="article-card-img" loading="eager" decoding="async" width="800" height="664">
+                        <a href="#story-daan" class="article-card-link" data-story-id="daan" aria-label="大安溪串聯山林與平原，孕育豐富的流域文化與歷史記憶。">
+                            <img src="assets/v2/article_daan.webp?v=3" alt="大安溪串聯山林與平原，孕育豐富的流域文化與歷史記憶。" class="article-card-img" loading="eager" decoding="async" width="800" height="664">
                         </a>
                     </article>
 
                     <!-- 03 烏溪文章 -->
                     <article class="article-card" data-river="wuxi" data-order="3">
-                        <a href="#" class="article-card-link" aria-label="烏溪匯聚群川、滋養城鄉，見證流域發展與人水共生的生活文化。">
-                            <img src="assets/v2/article_wuxi.webp" alt="烏溪匯聚群川、滋養城鄉，見證流域發展與人水共生的生活文化。" class="article-card-img" loading="eager" decoding="async" width="800" height="664">
+                        <a href="#story-wuxi" class="article-card-link" data-story-id="wuxi" aria-label="烏溪匯聚群川、滋養城鄉，見證流域發展與人水共生的生活文化。">
+                            <img src="assets/v2/article_wuxi.webp?v=3" alt="烏溪匯聚群川、滋養城鄉，見證流域發展與人水共生的生活文化。" class="article-card-img" loading="eager" decoding="async" width="800" height="664">
                         </a>
                     </article>
                 </div>
@@ -161,6 +161,32 @@
         </main>
     </div>
 
-    <script src="script.js" defer></script>
+    <!-- Story Modal / Reader Dialog -->
+    <div id="story-modal-overlay" class="story-modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="story-modal-container">
+            <header class="story-modal-header">
+                <div class="story-modal-header-info">
+                    <span class="story-modal-badge" id="modal-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                        <span id="modal-badge-text">烏溪流域 · 走讀紀實</span>
+                    </span>
+                    <h2 class="story-modal-title" id="modal-title">尋水烏溪：從龍泉圳到福龜聚落的水路故事</h2>
+                </div>
+                <button class="story-modal-close" id="modal-close-btn" aria-label="關閉故事視窗">✕</button>
+            </header>
+
+            <div class="story-modal-body" id="modal-body-content">
+                <!-- Dynamically rendered story content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox for Image Zoom -->
+    <div id="story-lightbox" class="story-lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+        <button class="story-lightbox-close" id="lightbox-close-btn" aria-label="關閉放大圖">✕</button>
+        <img src="" alt="" class="story-lightbox-img" id="lightbox-img">
+    </div>
+
+    <script src="script.js?v=3" defer></script>
 </body>
 </html>
