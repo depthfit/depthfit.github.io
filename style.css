@@ -301,6 +301,151 @@ button {
     transform: scale(1.015);
 }
 
+/* ==========================================================
+   HOMEPAGE SINGLE-PAGE ZERO-SCROLL VIEWPORT SCALING
+   Adapts desktop & laptop screens (4K, 2K, 1080p, 900p, 768p, 720p)
+   to fit comfortably on ONE screen without vertical scrolling.
+   ========================================================== */
+@media (min-width: 900px) and (min-height: 520px) {
+    html.home-html,
+    html:has(body.home-page),
+    body.home-page {
+        height: 100vh;
+        max-height: 100vh;
+        overflow: hidden;
+    }
+
+    body.home-page {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .home-page .main-header-bar {
+        flex-shrink: 0;
+    }
+
+    .home-page .main-header {
+        padding: clamp(0.4rem, 1vh, 0.8rem) clamp(1.5rem, 3vw, 3.5rem);
+    }
+
+    .home-page .header-logo-img {
+        height: clamp(34px, 4.2vh, 48px);
+    }
+
+    .home-page .main-nav {
+        gap: clamp(1.2rem, 2vw, 2.5rem);
+    }
+
+    .home-page .nav-link {
+        font-size: clamp(0.95rem, 1.1vw, 1.12rem);
+    }
+
+    .home-page .lang-btn {
+        padding: 0.25rem 1.4rem;
+        font-size: clamp(0.92rem, 1vw, 1.05rem);
+    }
+
+    .home-page .hero-container {
+        flex: 1 1 auto;
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: clamp(0.2rem, 1vh, 0.8rem) clamp(1rem, 2.5vw, 2.5rem) clamp(0.4rem, 1.2vh, 1rem);
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1560px;
+        box-sizing: border-box;
+    }
+
+    .home-page .hero-banner-section {
+        flex-shrink: 0;
+        margin: 0 0 clamp(0.2rem, 0.8vh, 0.6rem) 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .home-page .hero-title-wrapper {
+        max-width: clamp(480px, 58vw, 980px);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .home-page .home-title-img {
+        max-height: clamp(65px, 14vh, 140px);
+        width: auto;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    .home-page .journals-section {
+        flex: 1 1 auto;
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .home-page .section-badge-container {
+        flex-shrink: 0;
+        align-self: flex-start;
+        margin-bottom: clamp(0.3rem, 1vh, 0.75rem);
+        padding-left: 0.2rem;
+    }
+
+    .home-page .section-badge {
+        padding: clamp(0.25rem, 0.5vh, 0.42rem) clamp(1.4rem, 1.8vw, 2.2rem);
+    }
+
+    .home-page .badge-img {
+        height: clamp(22px, 2.8vh, 30px);
+        width: auto;
+    }
+
+    .home-page .cards-container {
+        flex: 1 1 auto;
+        min-height: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: clamp(0.8rem, 1.5vw, 1.6rem);
+        width: auto;
+        max-width: 100%;
+        padding: 10px 4px;
+        box-sizing: border-box;
+    }
+
+    .home-page .journal-card {
+        height: 100%;
+        max-height: clamp(220px, 48vh, 480px);
+        aspect-ratio: 600 / 1128;
+        width: auto;
+        max-width: calc((100vw - 4rem) / 4);
+        flex: 0 1 auto;
+        border-radius: clamp(14px, 1.2vw, 20px);
+    }
+
+    .home-page .journal-card:hover {
+        transform: translateY(-8px);
+    }
+
+    .home-page .journal-card-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
+
 
 /* ==========================================================
    INNER PAGE SPECIFIC STYLES (.inner-page)
@@ -1001,17 +1146,23 @@ button {
     .nav-link {
         font-size: 1.05rem;
     }
-    .cards-container {
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 800px;
-        gap: 1.5rem;
-    }
     .article-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
     }
     .inner-content-area {
         padding: 2.2rem 2.5rem 5rem;
+    }
+}
+
+/* Tablet Portrait (769px - 899px) */
+@media (max-width: 899px) and (min-width: 769px) {
+    .home-page .cards-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 680px;
+        margin: 0 auto;
+        gap: 1.5rem;
     }
 }
 
