@@ -242,7 +242,7 @@ button {
 .hero-subtitles-group {
     position: absolute;
     right: 2.5%;
-    top: 98%;
+    top: 108%;
     width: 48%;
     display: flex;
     flex-direction: column;
@@ -1517,7 +1517,7 @@ button {
     .hero-subtitles-group {
         position: static;
         width: 100%;
-        margin-top: 0.75rem;
+        margin-top: 0.95rem;
         align-items: center;
         gap: 0.35rem;
     }
