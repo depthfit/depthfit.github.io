@@ -523,7 +523,7 @@ button {
 }
 
 .inner-page.action-bg .inner-bg-image {
-    background-image: url('assets/v2/inner_bg_action.webp?v=3');
+    background-image: url('assets/v2/inner_bg_action.webp');
 }
 
 .mobile-header {
