@@ -241,7 +241,7 @@ button {
 
 .hero-subtitles-group {
     position: absolute;
-    right: 2.5%;
+    right: -8%;
     top: 108%;
     width: 48%;
     display: flex;
@@ -558,6 +558,15 @@ button {
 .inner-layout {
     display: flex;
     min-height: 100vh;
+}
+
+@media (min-width: 900px) {
+    .inner-layout {
+        zoom: 0.8;
+    }
+    .sidebar {
+        height: 125vh;
+    }
 }
 
 /* Sidebar */
