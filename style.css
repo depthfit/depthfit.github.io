@@ -698,11 +698,11 @@ button {
 }
 
 .breadcrumb-icon {
-    color: var(--primary-navy);
-    width: 15px;
-    height: 15px;
+    width: 13px;
+    height: 17px;
     display: inline-block;
-    vertical-align: -2px;
+    vertical-align: -3px;
+    flex-shrink: 0;
 }
 
 .breadcrumb-home {
