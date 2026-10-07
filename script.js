@@ -384,9 +384,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Story links click handler
     document.querySelectorAll('[data-story-id]').forEach(link => {
         link.addEventListener('click', (e) => {
-            e.preventDefault();
             const sid = link.getAttribute('data-story-id');
-            openStoryModal(sid);
+            if (sid && storyData[sid]) {
+                e.preventDefault();
+                openStoryModal(sid);
+            }
         });
     });
 });
