@@ -526,6 +526,14 @@ button {
     background-image: url('assets/v2/inner_bg_action.webp');
 }
 
+.inner-page.eco-bg .inner-bg-image {
+    background-image: url('assets/v2/inner_bg_eco.webp');
+}
+
+.inner-page.collab-bg .inner-bg-image {
+    background-image: url('assets/v2/inner_bg_collab.webp');
+}
+
 .mobile-header {
     display: none;
     justify-content: space-between;
