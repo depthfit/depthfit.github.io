@@ -9,6 +9,7 @@ _raw_materials/
 .playwright-mcp/
 preview_*.png
 螢幕擷取畫面*.png
+00.*.png
 *.jpg
 
 # Standard web development ignores

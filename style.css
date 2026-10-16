@@ -723,6 +723,18 @@ button {
     margin: 0 0.1rem;
 }
 
+.breadcrumb-link {
+    color: var(--primary-navy);
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: color 0.2s ease;
+}
+
+.breadcrumb-link:hover {
+    color: #1976d2;
+    text-decoration: underline;
+}
+
 .breadcrumb-current {
     letter-spacing: 1px;
     font-weight: 700;
