@@ -831,6 +831,7 @@ button {
     color: var(--primary-navy);
     font-size: 1.05rem;
     font-weight: 600;
+    margin-left: auto;
 }
 
 .sort-wrapper {
