@@ -1101,6 +1101,8 @@ button {
     width: 100%;
     border-bottom: 1px solid rgba(180, 215, 240, 0.5);
     transition: background-color 0.25s ease;
+    content-visibility: auto;
+    contain-intrinsic-size: 0 95px;
 }
 
 .article-text-item:hover {

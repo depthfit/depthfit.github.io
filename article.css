@@ -260,6 +260,8 @@ body.article-page {
 /* 文章核心章節 */
 .article-section {
     margin-bottom: 3.5rem;
+    content-visibility: auto;
+    contain-intrinsic-size: 0 450px;
 }
 
 .section-header {
